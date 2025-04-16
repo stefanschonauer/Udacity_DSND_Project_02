@@ -59,7 +59,7 @@ class Team(QueryBase):
             WHERE team_id = {id}
             """
 
-        return self.pandas_query(query)
+        return self.query(query)
 
 
     # Below is method with an SQL query
@@ -85,4 +85,4 @@ class Team(QueryBase):
                    )
                 """
         
-        return self.pandas_query(query)
+        return self.query(query)

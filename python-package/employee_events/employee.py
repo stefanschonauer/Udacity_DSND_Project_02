@@ -37,7 +37,7 @@ class Employee(QueryBase):
             FROM employee
             """
         
-        return self.pandas_query(query)
+        return self.query(query)
 
     # Define a method called `username`
     # that receives an `id` argument
@@ -60,7 +60,7 @@ class Employee(QueryBase):
             WHERE employee_id = {id}
             """
         
-        return self.pandas_query(query)
+        return self.query(query)
 
 
     # Below is method with an SQL query
