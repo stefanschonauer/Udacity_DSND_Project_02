@@ -117,7 +117,7 @@ class LineChart(MatplotlibViz):
         # and assign the figure and axis
         # to variables
         #### YOUR CODE HERE
-        ax, fig = plt.subplots()
+        fig, ax = plt.subplots()
         
         # call the .plot method for the
         # cumulative counts dataframe
@@ -139,8 +139,6 @@ class LineChart(MatplotlibViz):
         ax.set_title('Plot of Events')
         ax.xlabel('Date')
         ax.ylabel('Cumulated Positive and Negative Events')
-
-        return fig
 
 # Create a subclass of base_components/MatplotlibViz
 # called `BarChart`
@@ -205,7 +203,6 @@ class BarChart(MatplotlibViz):
         #### YOUR CODE HERE
         self.set_axis_styling(ax, bordercolor='black', fontcolor='black')
  
-        return fig
 
 # Create a subclass of combined_components/CombinedComponent
 # called Visualizations       
