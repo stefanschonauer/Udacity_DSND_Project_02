@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 from employee_events import QueryBase, Employee, Team
 
 # import the load_model function from the utils.py file
+# source https://knowledge.udacity.com/questions/1063797
 #### YOUR CODE HERE
 from utils import load_model
 
