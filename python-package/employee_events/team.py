@@ -28,14 +28,14 @@ class Team(QueryBase):
         # the team_name and team_id columns
         # from the team table for all teams
         # in the database
+        # source https://knowledge.udacity.com/questions/1066989
         #### YOUR CODE HERE
 
         query = f"""
-            SELECT 'team_name', team_id
-            FROM team
+            SELECT team_name, team_id
+            FROM {self.name}
             """
-        
-        return self.pandas_query(query)
+        return self.query(query)
 
     
     # Define a `username` method
@@ -51,14 +51,14 @@ class Team(QueryBase):
         # Use f-string formatting and a WHERE filter
         # to only return the team name related to
         # the ID argument
+        # source https://knowledge.udacity.com/questions/1066989
         #### YOUR CODE HERE
 
         query = f"""
-            SELECT 'team_name'
-            FROM team
+            SELECT team_name
+            FROM {self.name}
             WHERE team_id = {id}
             """
-
         return self.query(query)
 
 
@@ -85,4 +85,4 @@ class Team(QueryBase):
                    )
                 """
         
-        return self.query(query)
+        return self.pandas_query(query)

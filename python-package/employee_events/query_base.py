@@ -66,7 +66,7 @@ class QueryBase(QueryMixin):
         query = f'''
             SELECT note_date, note
             FROM notes
-            JOIN {self.name};
+            JOIN {self.name}
             ON {self.name}.{self.name}_id=notes.{self.name}_id
             WHERE {self.name}.{self.name}_id = {id}
             '''

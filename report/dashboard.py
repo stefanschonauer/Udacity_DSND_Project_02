@@ -116,6 +116,7 @@ class LineChart(MatplotlibViz):
         # Initialize a pandas subplot
         # and assign the figure and axis
         # to variables
+        # sourcehttps://knowledge.udacity.com/questions/1066989
         #### YOUR CODE HERE
         fig, ax = plt.subplots()
         
@@ -135,10 +136,11 @@ class LineChart(MatplotlibViz):
         self.set_axis_styling(ax, bordercolor='black', fontcolor='black')
         
         # Set title and labels for x and y axis
+        # source https://knowledge.udacity.com/questions/1066989
         #### YOUR CODE HERE
         ax.set_title('Plot of Events')
-        ax.xlabel('Date')
-        ax.ylabel('Cumulated Positive and Negative Events')
+        ax.set_xlabel('Date')
+        ax.set_ylabel('Cumulated Positive and Negative Events')
 
 # Create a subclass of base_components/MatplotlibViz
 # called `BarChart`
@@ -189,8 +191,9 @@ class BarChart(MatplotlibViz):
             pred = index_pred_data[0]
         
         # Initialize a matplotlib subplot
+        # source https://knowledge.udacity.com/questions/1066989
         #### YOUR CODE HERE
-        ax, fig = plt.subplots()
+        fig, ax = plt.subplots()
         
         # Run the following code unchanged
         ax.barh([''], [pred])
